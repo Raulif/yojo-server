@@ -10,9 +10,9 @@ app.use((ctx, next) => {
 });
 const router = new Router();
 router.post('/contact', handleContact);
-router.get('/contact', (ctx) => {
-  console.log('contact');
-      ctx.response.body = { ok: true };
+router.get('/test', (ctx) => {
+  console.log('test');
+  ctx.response.body = { ok: true };
 
 });
 
@@ -21,8 +21,7 @@ app.use(router.allowedMethods());
 
 app.addEventListener('listen', ({ hostname, port, secure }) => {
   console.log(
-    `Listening on: ${secure ? 'https://' : 'http://'}${
-      hostname ?? 'localhost'
+    `Listening on: ${secure ? 'https://' : 'http://'}${hostname ?? 'localhost'
     }:${port}`
   );
 });
