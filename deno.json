@@ -1,0 +1,10 @@
+{
+	"tasks": {
+		"dev": "deno run --inspect --env-file --allow-env --allow-read --allow-net --watch main.ts"
+	},
+	"nodeModulesDir": "auto",
+	"imports": {
+		"@oak/oak": "jsr:@oak/oak@^17.1.6",
+		"resend": "npm:resend@^6.4.2"
+	}
+}
