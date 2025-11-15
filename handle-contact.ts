@@ -9,9 +9,11 @@ export const handleContact = async (
 ) => {
   try {
     console.log('[ROUTE] HANDLE CONTACT');
-    const body = await ctx.request.body.json();
-    console.log({body})
+    const body = await ctx.request.body;
+    console.log({ body })
+    ctx.response.status = 200;
+    ctx.response.body = { ok: true };
   } catch (e) {
-    console.error('ERROR',e)
+    console.error('ERROR', e)
   }
 }
